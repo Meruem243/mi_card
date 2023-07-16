@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               Text(
                 'Coal sigh',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
                 ),
