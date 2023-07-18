@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const CircleAvatar(
+                CircleAvatar(
                   backgroundColor: Colors.lightGreen,
                   radius: 70.0,
                   backgroundImage: AssetImage('images/caol1.jpeg'),
                 ),
-                const Text(
+                Text(
                   'Name',
                   style: TextStyle(
                     fontFamily: 'Lugrasimo',
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
+                Text(
                   'Description',
                   style: TextStyle(
                     fontFamily: 'Tangerine',
@@ -40,58 +40,71 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Container(
+                Divider(
+                  height: 10.0,
+                  color: Colors.blue,
+                  thickness: 5.0,
+                  indent: 100,
+                  endIndent: 100.0,
+                ),
+                Card(
                   color: Colors.white,
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 50.0),
-                  padding: const EdgeInsets.all(10.0),
-                  child: const Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.black38,
-                        size: 30.0,
-                        // semanticLabel: 'Text to announce in accessibility modes',
-                      ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        '+123 456 7890',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+                  // padding: const EdgeInsets.all(10.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Icon(
+                          Icons.phone,
+                          color: Colors.black38,
+                          size: 30.0,
+                          // semanticLabel: 'Text to announce in accessibility modes',
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          width: 20.0,
+                        ),
+                        Text(
+                          '+123 456 7890',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
+                Card(
                   color: Colors.white,
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 50.0),
-                  padding: const EdgeInsets.all(10.0),
-                  child: const Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        color: Colors.black38,
-                        size: 30.0,
-                        // semanticLabel: 'Text to announce in accessibility modes',
-                      ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        'Example@email.com',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+                  // padding: const EdgeInsets.all(10.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Icon(
+                          Icons.email,
+                          color: Colors.black38,
+                          size: 30.0,
+                          // semanticLabel: 'Text to announce in accessibility modes',
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          width: 20.0,
+                        ),
+                        Text(
+                          'Example@email.com',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
